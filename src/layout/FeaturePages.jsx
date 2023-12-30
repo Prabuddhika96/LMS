@@ -10,7 +10,7 @@ function FeaturePages({ Content, title, isActive, handleClick, setIsActive }) {
       <div className="flex">
         <SideBar isActive={isActive} setIsActive={setIsActive} />
         <div className={`min-h-screen`}>
-          <div className="ml-1 min-h-[500px] ">
+          <div className="p-5 min-h-[500px] ">
             <Content />
           </div>
         </div>

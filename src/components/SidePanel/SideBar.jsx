@@ -63,7 +63,7 @@ function SideBar({ isActive, navData, setIsActive }) {
 
   return (
     <div
-      className={`${
+      className={`shadow-md ${
         isActive ? `w-[200px]` : `w-[80px]`
       } h-screen duration-500 bg-white`}
     >
