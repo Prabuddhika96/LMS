@@ -16,7 +16,7 @@ function FeaturePages({ Content, title, isActive, handleClick, setIsActive }) {
         className={`min-h-screen ${
           isActive
             ? "md:pl-[100px] !pl-[200px] duration-500 p-2 ml-3 max-sm:pl-0 max-sm:ml-2 max-sm:mt-2"
-            : "pl-0 duration-500 p-2 ml-8 max-sm:pl-0 max-sm:ml-2  "
+            : "duration-500 p-2 ml-[50px] max-sm:pl-0 max-sm:ml-2"
         }`}
       >
         <div className="ml-1 min-h-[500px] ">

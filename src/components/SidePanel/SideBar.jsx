@@ -29,7 +29,7 @@ function SideBar({ isActive, navData, setIsActive }) {
         className={`duration-500 !bg-white sidebar z-40 navbar fixed overflow-y-auto text-center shadow h-screen max-sm:z-[100] max-sm:mt-0 ${
           isActive
             ? "left-0 p-2 w-[200px] !overflow-visible max-sm:w-[100px] "
-            : " md:left-[-100px] left-[-200px] p-2 w-[60px] "
+            : " md:left-[0px] left-[20px] p-2 w-[50px] "
         }`}
         ref={popRef}
       >
