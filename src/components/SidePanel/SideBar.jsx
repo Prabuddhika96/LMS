@@ -17,6 +17,12 @@ function getItem(label, key, icon, children, type) {
   };
 }
 const items = [
+  getItem("Navigation One", "sub1", <MailOutlined />, [
+    getItem("Option 5", "5"),
+    getItem("Option 6", "6"),
+    getItem("Option 7", "7"),
+    getItem("Option 8", "8"),
+  ]),
   getItem("Option 1", "1", <PieChartOutlined />),
   getItem("Option 2", "2", <DesktopOutlined />),
   getItem("Option 3", "3", <ContainerOutlined />),

@@ -3,6 +3,21 @@ import { BiMenuAltLeft } from "react-icons/bi";
 import { HiMenu } from "react-icons/hi";
 import { IoNotifications } from "react-icons/io5";
 import avatar from "../../assets/images/avatar.png";
+import { Button, Popover, Space } from "antd";
+
+const content = (
+  <div>
+    <p className="cursor-pointer">Content</p>
+    <p className="cursor-pointer">Logout</p>
+  </div>
+);
+
+const content1 = (
+  <div className="flex justify-start items-center gap-1 cursor-pointer hover:bg-slate-300 duration-200 ease-in-out">
+    <img src={avatar} alt="" height={"35px"} width={"35px"} />
+    <p className="font-bold">Jhon</p>
+  </div>
+);
 
 function Header({ handleClick, title, isActive }) {
   return (
@@ -32,8 +47,18 @@ function Header({ handleClick, title, isActive }) {
         </div>
 
         <div className="flex justify-end items-center gap-3">
-          <IoNotifications className="text-xl" />
-          <img src={avatar} alt="" height={"35px"} width={"35px"} />
+          <Popover content={content} title={"Notification"} trigger="click">
+            <div className="h-[55px]">
+              <IoNotifications className="text-xl h-full" />
+            </div>
+          </Popover>
+
+          <Popover content={content} title={content1} trigger="click">
+            <div className="flex justify-end items-center gap-1 cursor-pointer hover:bg-slate-300 p-3 duration-200 ease-in-out">
+              <img src={avatar} alt="" height={"35px"} width={"35px"} />
+              <p className="font-bold">Jhon</p>
+            </div>
+          </Popover>
         </div>
       </div>
     </div>
