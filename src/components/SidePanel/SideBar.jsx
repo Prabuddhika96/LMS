@@ -1,14 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import {
   AppstoreOutlined,
   ContainerOutlined,
   DesktopOutlined,
   MailOutlined,
-  MenuFoldOutlined,
-  MenuUnfoldOutlined,
   PieChartOutlined,
 } from "@ant-design/icons";
-import { Button, Menu } from "antd";
+import { Menu } from "antd";
 function getItem(label, key, icon, children, type) {
   return {
     key,
@@ -39,27 +37,8 @@ const items = [
 ];
 
 function SideBar({ isActive, navData, setIsActive }) {
-  const [iconClicked, setIconClicked] = useState(false);
-  const [selectedIcon, setSelectedIcon] = useState();
-
-  const popRef = useRef(null);
-
-  useEffect(() => {
-    const windowWidth = window.innerWidth;
-    if (windowWidth < 500) {
-      const handleClickOutside = (event) => {
-        if (popRef.current && !popRef.current.contains(event.target)) {
-          setIsActive(false);
-        }
-      };
-      if (isActive) {
-        window.addEventListener("mousedown", handleClickOutside);
-      }
-      return () => {
-        window.removeEventListener("mousedown", handleClickOutside);
-      };
-    }
-  }, [isActive]);
+  //   const [iconClicked, setIconClicked] = useState(false);
+  //   const [selectedIcon, setSelectedIcon] = useState();
 
   return (
     <div

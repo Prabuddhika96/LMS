@@ -3,11 +3,11 @@ import LoginForm from "../components/Login/LoginForm";
 import loginImg from "../assets/images/login.jpg";
 
 function Login() {
-  const backgroundImage = {
-    backgroundImage: `url(${loginImg})`,
-    backgroundSize: "cover",
-    backgroundPosition: "center",
-  };
+  // const backgroundImage = {
+  //   backgroundImage: `url(${loginImg})`,
+  //   backgroundSize: "cover",
+  //   backgroundPosition: "center",
+  // };
 
   return (
     <div
