@@ -1,4 +1,7 @@
 export const RouteName = {
-  Home: "/",
+  StudentHome: "/student/*",
   Login: "/login",
+
+  // student
+  AssignmentThread: "/assignment/:id",
 };

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { RouteName } from "../constants/RouteName";
-import Home from "../pages/Home";
+import StudentHome from "../pages/StudentHome";
 import Login from "../pages/Login";
 import FeaturePages from "../layout/FeaturePages";
+import AssignmentThread from "../pages/Student/Assignment/AssignmentThread";
 
 function AppRouter() {
   const [isActive, setIsActive] = useState(true);
@@ -16,14 +17,12 @@ function AppRouter() {
         <Routes>
           <Route path={RouteName.Login} element={<Login />} />
           <Route
-            path={RouteName.Home}
+            path={RouteName.StudentHome}
             element={
-              <FeaturePages
-                Content={Home}
+              <StudentHome
                 handleClick={handleClick}
                 isActive={isActive}
                 setIsActive={setIsActive}
-                title={"Settings"}
               />
             }
           />
