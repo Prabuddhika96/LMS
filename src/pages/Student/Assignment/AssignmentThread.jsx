@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import LargeText from "../../../components/Text/LargeText";
-import Loading from "../../../components/Loading";
 import { MdOutlineAssignment } from "react-icons/md";
 import BlueSubText from "../../../components/Text/BlueSubText";
 import SubHeading from "../../../components/Text/SubHeading";
+import UploadThread from "./UploadThread";
+import SpinLoader from "../../../components/SpinLoader";
 
 function AssignmentThread() {
   const [isLoading, setIsLoading] = useState(true);
@@ -16,7 +17,7 @@ function AssignmentThread() {
     <>
       {isLoading ? (
         <>
-          <Loading />
+          <SpinLoader />
         </>
       ) : (
         <div className="sm:flex max-sm:block justify-between items-center w-full gap-3">
@@ -46,7 +47,7 @@ function AssignmentThread() {
             </div>
           </div>
           <div className="sm:w-4/12 max-sm:w-full bg-white p-5 rounded-md shadow-lg max-sm:mt-3">
-            AssignmentThread
+            <UploadThread />
           </div>
         </div>
       )}

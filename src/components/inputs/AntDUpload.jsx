@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import upload_logo from "Assets/Images/uploadFile.svg";
+import upload_logo from "../../assets/images/uploadFile.svg";
 import LargeText from "../Text/LargeText";
 import BlueSubText from "../Text/BlueSubText";
 import React from "react";
@@ -13,7 +13,7 @@ function AntDUpload({
   rounded,
 }) {
   const [file, setFile] = useState("");
-  const upload = useRef<HTMLInputElement>(null);
+  const upload = useRef(null);
 
   const handleClickUpload = () => {
     // setLoadingSpin(true);
@@ -28,7 +28,7 @@ function AntDUpload({
     if (!fileObj) {
       return;
     } else {
-      if (fileObj.type.startsWith("image/")) {
+      if (fileObj.type.startsWith("")) {
         if (fileObj?.size / 1024 < maxSize) {
           // Set the uploaded image URL
           setFileDetails(fileObj);
