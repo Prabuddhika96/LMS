@@ -24,8 +24,8 @@ function Header({ handleClick, title, isActive }) {
     <div className="sticky top-0 z-50 navbar shadow-md pr-3  bg-white">
       <div className="flex w-full h-16 justify-between items-center">
         <div
-          className={`flex items-center px-3 justify-start gap-3  pl-6 h-full bg-[#6673fc] text-white duration-500 ${
-            isActive ? `w-[200px]` : `w-[80px]`
+          className={`flex items-center px-3 justify-start gap-3 w-[80px]  pl-6 h-full bg-[var(--main-blue)] text-white duration-500 ${
+            isActive ? `sm:w-[200px]` : ``
           }`}
         >
           <span
@@ -40,7 +40,7 @@ function Header({ handleClick, title, isActive }) {
           </span>
 
           {isActive && (
-            <span className="text-2xl flex justify-center duration-500  font-bold">
+            <span className="text-2xl flex max-sm:hidden justify-center duration-500  font-bold">
               LMS
             </span>
           )}

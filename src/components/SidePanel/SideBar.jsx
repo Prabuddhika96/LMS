@@ -2,15 +2,16 @@ import React from "react";
 import { Menu } from "antd";
 import avatar from "../../assets/images/avatar.png";
 import { useNavigate } from "react-router-dom";
-import { RouteName } from "../../constants/RouteName";
 
-function SideBar({ isActive, navData, setIsActive, items }) {
+function SideBar({ isActive, items }) {
   const navigate = useNavigate();
 
   const handleMenuSelect = (item) => {
-    // navigate(RouteName.Login);
-    navigate(RouteName.StudentHome.replace("/*", RouteName.AssignmentThread));
+    if (item.item.props.route) {
+      navigate(item.item.props.route);
+    }
   };
+
   return (
     <div
       className={`shadow-md fixed ${
