@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --small-text: #8a9ba2;
+  --black: #000;
+  --red: #f30543;
+  --background: #131313;
+  --searchbar: rgb(58, 58, 58);
+  --grey: #313131;
+  --clr-white: #fff;
+  --clr-purple: #4b145b;
+  --clr-grey-special: #6b6b6b;
+  --clr-black: #222;
+  --facebook: #4267b2;
+  --apple: #38415f;
+  --red-circle-1: rgba(150, 16, 56, 0.1);
+  --red-circle-2: rgba(151, 47, 47, 0.15);
+  --red-circle-3: rgba(151, 47, 47, 0.2);
+  /* used as bg in favorite and watchlist button in card*/
+  --card-small-button: rgba(0, 0, 0, 0.575);
+  --card-booster-button: #ffee00;
+  --FAFAFA: #fafafa;
+  --Color7B9DB4: #7b9db4;
+  --Color1E1E1E: #1e1e1e;
+  --skeletonColor: #1a1919;
+
+  --main-blue: #6673fc;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
