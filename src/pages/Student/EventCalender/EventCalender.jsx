@@ -4,7 +4,6 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import PopUpModel from "../../../components/PopUpModel/PopUpModel";
-import AddEvent from "./AddEvent";
 import EventPopUp from "./EventPopUp";
 
 function EventCalender() {
