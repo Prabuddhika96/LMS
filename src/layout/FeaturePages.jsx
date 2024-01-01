@@ -105,7 +105,14 @@ const studentItems = [
       getItem("Option 12", "12"),
     ]),
   ]),
-  getItem("Option 9", "13", <PieChartOutlined />),
+  getItem(
+    "Event Calender",
+    "13",
+    <PieChartOutlined />,
+    null,
+    null,
+    RouteName.StudentHome.replace("/*", RouteName.EventCalender)
+  ),
   getItem("Option 2", "14", <DesktopOutlined />),
   getItem("Option 3", "15", <ContainerOutlined />),
 ];
