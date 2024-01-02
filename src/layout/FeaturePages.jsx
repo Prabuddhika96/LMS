@@ -91,7 +91,23 @@ const studentItems = [
       RouteName.StudentHome.replace("/*", RouteName.AssignmentThread)
     ),
   ]),
-
+  getItem(
+    "Event Calender",
+    "13",
+    <PieChartOutlined />,
+    null,
+    null,
+    RouteName.StudentHome.replace("/*", RouteName.EventCalender)
+  ),
+  getItem(
+    "Personal Notes",
+    "14",
+    <DesktopOutlined />,
+    null,
+    null,
+    RouteName.StudentHome.replace("/*", RouteName.PersonalNotes)
+  ),
+  getItem("Option 3", "15", <ContainerOutlined />),
   getItem("Navigation One1", "sub2", <MailOutlined />, [
     getItem("Option 6", "6"),
     getItem("Option 7", "7"),
@@ -105,14 +121,4 @@ const studentItems = [
       getItem("Option 12", "12"),
     ]),
   ]),
-  getItem(
-    "Event Calender",
-    "13",
-    <PieChartOutlined />,
-    null,
-    null,
-    RouteName.StudentHome.replace("/*", RouteName.EventCalender)
-  ),
-  getItem("Option 2", "14", <DesktopOutlined />),
-  getItem("Option 3", "15", <ContainerOutlined />),
 ];

@@ -9,6 +9,7 @@ function PopUpModel({
   okBtnText,
   Content,
   hideCancel = false,
+  hideOk = false,
 }) {
   return (
     <Modal
@@ -35,14 +36,18 @@ function PopUpModel({
           )}
         </>,
 
-        <button
-          className="px-4 mx-1 py-1 mt-3 border-blue-600 border-[1px] border-solid bg-blue-600 text-white rounded-md hover:bg-blue-500 duration-200 ease-in-out"
-          type="submit"
-          key="ok"
-          onClick={onOkFunction}
-        >
-          {okBtnText ? okBtnText : `Add Event`}
-        </button>,
+        <>
+          {!hideOk && (
+            <button
+              className="px-4 mx-1 py-1 mt-3 border-blue-600 border-[1px] border-solid bg-blue-600 text-white rounded-md hover:bg-blue-500 duration-200 ease-in-out"
+              type="submit"
+              key="ok"
+              onClick={onOkFunction}
+            >
+              {okBtnText ? okBtnText : `Add Event`}
+            </button>
+          )}
+        </>,
         // <Button key="ok" type="primary" onClick={onOkFunction}>
         //   OK
         // </Button>,
