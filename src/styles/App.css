@@ -1,6 +1,38 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+
+:root {
+  --small-text: #8a9ba2;
+  --black: #000;
+  --red: #f30543;
+  --background: #131313;
+  --searchbar: rgb(58, 58, 58);
+  --grey: #313131;
+  --clr-white: #fff;
+  --clr-purple: #4b145b;
+  --clr-grey-special: #6b6b6b;
+  --clr-black: #222;
+  --facebook: #4267b2;
+  --apple: #38415f;
+  --red-circle-1: rgba(150, 16, 56, 0.1);
+  --red-circle-2: rgba(151, 47, 47, 0.15);
+  --red-circle-3: rgba(151, 47, 47, 0.2);
+  /* used as bg in favorite and watchlist button in card*/
+  --card-small-button: rgba(0, 0, 0, 0.575);
+  --card-booster-button: #ffee00;
+  --FAFAFA: #fafafa;
+  --Color7B9DB4: #7b9db4;
+  --Color1E1E1E: #1e1e1e;
+  --skeletonColor: #1a1919;
+
+  --main-blue: #6673fc;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif !important;
+}
 
 .App {
   text-align: center;
