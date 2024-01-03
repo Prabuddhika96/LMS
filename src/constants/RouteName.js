@@ -1,6 +1,6 @@
 export const RouteName = {
   StudentHome: "/student/*",
-  Login: "/login",
+  Login: "/",
 
   // student
   AssignmentThread: "/assignment/:id",
