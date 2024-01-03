@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 
 :root {
   --small-text: #8a9ba2;
@@ -27,6 +28,10 @@
   --skeletonColor: #1a1919;
 
   --main-blue: #6673fc;
+}
+
+body {
+  font-family: "Ubuntu", sans-serif !important;
 }
 
 .App {

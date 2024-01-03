@@ -6,6 +6,8 @@ import AssignmentThread from "./Student/Assignment/AssignmentThread";
 import TimeTable from "./Student/TimeTable/TimeTable";
 import EventCalender from "./Student/EventCalender/EventCalender";
 import PersonalNotes from "./Student/PersonalNotes/PersonalNotes";
+import Notices from "./Student/Notices/Notices";
+import Courses from "./Student/Courses/Courses";
 
 function StudentHome({ isActive, handleClick, setIsActive }) {
   return (
@@ -52,6 +54,30 @@ function StudentHome({ isActive, handleClick, setIsActive }) {
           element={
             <FeaturePages
               Content={PersonalNotes}
+              handleClick={handleClick}
+              isActive={isActive}
+              setIsActive={setIsActive}
+            />
+          }
+        />
+
+        <Route
+          path={RouteName.Notices}
+          element={
+            <FeaturePages
+              Content={Notices}
+              handleClick={handleClick}
+              isActive={isActive}
+              setIsActive={setIsActive}
+            />
+          }
+        />
+
+        <Route
+          path={RouteName.Courses}
+          element={
+            <FeaturePages
+              Content={Courses}
               handleClick={handleClick}
               isActive={isActive}
               setIsActive={setIsActive}

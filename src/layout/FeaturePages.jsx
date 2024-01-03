@@ -4,10 +4,8 @@ import Header from "../components/Header/Header";
 import SideBar from "../components/SidePanel/SideBar";
 import { getItem } from "../utils/getItem";
 import {
-  AppstoreOutlined,
   ContainerOutlined,
   DesktopOutlined,
-  MailOutlined,
   CalendarOutlined,
   PieChartOutlined,
 } from "@ant-design/icons";
@@ -27,13 +25,13 @@ function FeaturePages({ Content, title, isActive, handleClick, setIsActive }) {
           />
         </div>
         <div
-          className={`min-h-screen duration-500 w-full ${
+          className={`min-h-[90vh] duration-500 w-full ${
             isActive
               ? `max-sm:pl-[70px] sm:pl-[200px]`
               : `max-sm:pl-[70px] sm:pl-[80px]`
           } `}
         >
-          <div className="px-5 py-5 min-h-screen w-full">
+          <div className="px-5 py-5 min-h-[90vh] w-full">
             <Content
               handleClick={handleClick}
               isActive={isActive}
@@ -107,18 +105,20 @@ const studentItems = [
     null,
     RouteName.StudentHome.replace("/*", RouteName.PersonalNotes)
   ),
-  getItem("Option 3", "15", <ContainerOutlined />),
-  getItem("Navigation One1", "sub2", <MailOutlined />, [
-    getItem("Option 6", "6"),
-    getItem("Option 7", "7"),
-    getItem("Option 8", "8"),
-  ]),
-  getItem("Navigation Two", "sub3", <AppstoreOutlined />, [
-    getItem("Option 9", "9"),
-    getItem("Option 10", "10"),
-    getItem("Submenu", "sub4", null, [
-      getItem("Option 11", "11"),
-      getItem("Option 12", "12"),
-    ]),
-  ]),
+  getItem(
+    "Notices",
+    "15",
+    <ContainerOutlined />,
+    null,
+    null,
+    RouteName.StudentHome.replace("/*", RouteName.Notices)
+  ),
+  getItem(
+    "Courses",
+    "16",
+    <ContainerOutlined />,
+    null,
+    null,
+    RouteName.StudentHome.replace("/*", RouteName.Courses)
+  ),
 ];

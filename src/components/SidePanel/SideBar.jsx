@@ -16,7 +16,7 @@ function SideBar({ isActive, items }) {
     <div
       className={`shadow-md fixed ${
         isActive ? `w-[200px]` : `w-[80px]`
-      } h-screen duration-500 bg-white`}
+      } h-[90vh] overflow-y-scroll duration-500 bg-white`}
     >
       {isActive && (
         <div className="duration-500 flex justify-center items-center py-3">

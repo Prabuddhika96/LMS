@@ -6,4 +6,6 @@ export const RouteName = {
   AssignmentThread: "/assignment/:id",
   EventCalender: "/event-calender",
   PersonalNotes: "/personal-notes",
+  Notices: "/notices",
+  Courses: "/courses",
 };
