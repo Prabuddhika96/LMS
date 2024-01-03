@@ -2,6 +2,9 @@ import React from "react";
 import { Menu } from "antd";
 import avatar from "../../assets/images/avatar.png";
 import { useNavigate } from "react-router-dom";
+import AntDTooltop from "../Tooltip/AntDTooltop";
+import { RouteName } from "../../constants/RouteName";
+import { MdOutlineEdit } from "react-icons/md";
 
 function SideBar({ isActive, items }) {
   const navigate = useNavigate();
@@ -24,6 +27,21 @@ function SideBar({ isActive, items }) {
             <img src={avatar} alt="" height={"90px"} width={"90px"} />
             <p className="text-lg">Jhon</p>
             <p className="text-sm text-gray-400">Student</p>
+            <AntDTooltop
+              title="Edit Profile"
+              Content={
+                <p
+                  className="text-base text-[var(--main-blue)] flex justify-center cursor-pointer"
+                  onClick={() => {
+                    navigate(
+                      RouteName.StudentHome.replace("/*", RouteName.EditProfile)
+                    );
+                  }}
+                >
+                  <MdOutlineEdit />
+                </p>
+              }
+            />
           </div>
         </div>
       )}

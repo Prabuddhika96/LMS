@@ -8,4 +8,5 @@ export const RouteName = {
   PersonalNotes: "/personal-notes",
   Notices: "/notices",
   Courses: "/courses",
+  EditProfile: "/edit-profile",
 };

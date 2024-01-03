@@ -8,6 +8,7 @@ import EventCalender from "./Student/EventCalender/EventCalender";
 import PersonalNotes from "./Student/PersonalNotes/PersonalNotes";
 import Notices from "./Student/Notices/Notices";
 import Courses from "./Student/Courses/Courses";
+import Profile from "./Student/Profile/Profile";
 
 function StudentHome({ isActive, handleClick, setIsActive }) {
   return (
@@ -78,6 +79,18 @@ function StudentHome({ isActive, handleClick, setIsActive }) {
           element={
             <FeaturePages
               Content={Courses}
+              handleClick={handleClick}
+              isActive={isActive}
+              setIsActive={setIsActive}
+            />
+          }
+        />
+
+        <Route
+          path={RouteName.EditProfile}
+          element={
+            <FeaturePages
+              Content={Profile}
               handleClick={handleClick}
               isActive={isActive}
               setIsActive={setIsActive}

@@ -19,6 +19,7 @@ function AntDInputField({
   size,
   label,
   type,
+  disabled = false,
 }) {
   const [passwordVisible, setPasswordVisible] = useState(false);
 
@@ -38,6 +39,7 @@ function AntDInputField({
           placeholder={placeholder}
           style={inputStyle}
           defaultValue={value}
+          disabled={disabled}
           suffix={
             type === "password" && (
               <div

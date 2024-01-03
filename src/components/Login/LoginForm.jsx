@@ -4,7 +4,7 @@ import AntDInputField from "../inputs/AntDInputField";
 
 function LoginForm() {
   const onFinish = (values) => {
-    const finalObj = {};
+    const finalObj = { values };
     console.log(finalObj);
   };
   return (

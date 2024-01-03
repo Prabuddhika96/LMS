@@ -4,22 +4,30 @@ import { HiMenu } from "react-icons/hi";
 import { IoNotifications } from "react-icons/io5";
 import avatar from "../../assets/images/avatar.png";
 import { Button, Popover, Space } from "antd";
-
-const content = (
-  <div>
-    <p className="cursor-pointer">Content</p>
-    <p className="cursor-pointer">Logout</p>
-  </div>
-);
-
-const content1 = (
-  <div className="flex justify-start items-center gap-1 cursor-pointer hover:bg-slate-300 duration-200 ease-in-out">
-    <img src={avatar} alt="" height={"35px"} width={"35px"} />
-    <p className="font-bold">Jhon</p>
-  </div>
-);
+import { useNavigate } from "react-router-dom";
+import { RouteName } from "../../constants/RouteName";
 
 function Header({ handleClick, title, isActive }) {
+  const navigate = useNavigate();
+
+  const content = (
+    <div>
+      <p className="cursor-pointer">Content</p>
+      <p className="cursor-pointer">Logout</p>
+    </div>
+  );
+
+  const content1 = (
+    <div
+      className="flex justify-start items-center gap-1 cursor-pointer rounded-md hover:bg-slate-200 p-1 duration-200 ease-in-out"
+      onClick={() => {
+        navigate(RouteName.StudentHome.replace("/*", RouteName.EditProfile));
+      }}
+    >
+      <img src={avatar} alt="" height={"35px"} width={"35px"} />
+      <p className="font-bold">Jhon</p>
+    </div>
+  );
   return (
     <div className="sticky top-0 z-50 navbar shadow-md pr-3  bg-white">
       <div className="flex w-full h-16 justify-between items-center">

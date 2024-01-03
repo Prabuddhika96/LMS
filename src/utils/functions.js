@@ -5,3 +5,9 @@ export const convertBytes = (bytes) => {
   const convertedSize = (bytes / Math.pow(1024, i)).toFixed(2);
   return `${parseFloat(convertedSize)} ${sizes[i]}`;
 };
+
+export const getBase64 = (img, callback) => {
+  const reader = new FileReader();
+  reader.addEventListener("load", () => callback(reader.result));
+  reader.readAsDataURL(img);
+};
